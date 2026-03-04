@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+/* Xtreme Kids Academy Theme Colors */
+:root {
+  /* Primary Colors */
+  --color-primary-red: #E63946;
+  --color-pure-white: #FFFFFF;
+  --color-secondary-purple: #6A4E9B;
+  --color-soft-gray: #F5F5F5;
+  --color-warm-yellow: #FFD166;
+
+  /* Background Colors */
+  --background: var(--color-pure-white);
+  --foreground: #1a1a1a;
+
+  /* Card and Surface Colors */
+  --card-bg: #FFFFFF;
+  --card-border: #E5E5E5;
+
+  /* Status Colors */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+
+  /* Level Colors */
+  --level-cadet: #60A5FA;
+  --level-rookie: #34D399;
+  --level-legend: #FBBF24;
+}
+
+/* Font Imports - Kid-friendly fonts */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v31/6xKtdSZaM9iE8KbpRA_hJFQNcOM.ttf) format('truetype');
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary-red);
+  --color-secondary: var(--color-secondary-purple);
+  --color-white: var(--color-pure-white);
+  --color-gray: var(--color-soft-gray);
+  --color-yellow: var(--color-warm-yellow);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  --font-kid: 'Quicksand', 'Comic Sans MS', cursive;
+  --font-parent: system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-parent);
+}
+
+/* Kid-friendly font class */
+.font-kid {
+  font-family: var(--font-kid), 'Comic Sans MS', cursive;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-[#E63946] text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#E63946] border-2 border-[#E63946] px-6 py-3 rounded-full font-semibold hover:bg-red-50 transition-all duration-200 active:scale-95;
+}
+
+.btn-premium {
+  @apply bg-[#6A4E9B] text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-md p-6 border border-gray-100;
+}
+
+.card-hover {
+  @apply card hover:shadow-xl transition-shadow duration-300 cursor-pointer;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#E63946] focus:outline-none transition-colors;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-red {
+  @apply badge bg-red-100 text-red-800;
+}
+
+.badge-purple {
+  @apply badge bg-purple-100 text-purple-800;
+}
+
+.badge-yellow {
+  @apply badge bg-yellow-100 text-yellow-800;
+}
+
+.badge-green {
+  @apply badge bg-green-100 text-green-800;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-3 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-gradient-to-r from-[#E63946] to-[#FFD166] rounded-full transition-all duration-500;
+}
+
+/* Star rating */
+.star {
+  @apply text-2xl text-gray-300;
+}
+
+.star-filled {
+  @apply text-2xl text-[#FFD166];
+}
+
+/* Level badges */
+.level-cadet {
+  @apply bg-blue-100 text-blue-800 border-2 border-blue-300;
+}
+
+.level-rookie {
+  @apply bg-green-100 text-green-800 border-2 border-green-300;
+}
+
+.level-legend {
+  @apply bg-yellow-100 text-yellow-800 border-2 border-yellow-300;
+}
+
+/* Animation keyframes */
+@keyframes bounce-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E63946;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5303c;
+}
+
+/* Utility classes */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive helpers */
+@media (max-width: 768px) {
+  .landscape-warning {
+    @apply fixed inset-0 bg-white z-50 flex items-center justify-center;
+  }
+}
