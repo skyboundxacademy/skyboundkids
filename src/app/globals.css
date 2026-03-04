@@ -68,85 +68,185 @@ body {
 
 /* Custom button styles */
 .btn-primary {
-  @apply bg-[#E63946] text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg;
+  background-color: #E63946;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
 }
 
 .btn-secondary {
-  @apply bg-white text-[#E63946] border-2 border-[#E63946] px-6 py-3 rounded-full font-semibold hover:bg-red-50 transition-all duration-200 active:scale-95;
+  background-color: white;
+  color: #E63946;
+  border: 2px solid #E63946;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fef2f2;
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
 }
 
 .btn-premium {
-  @apply bg-[#6A4E9B] text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg;
+  background-color: #6A4E9B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.btn-premium:hover {
+  background-color: #5b3d82;
+  transform: scale(1.05);
+}
+
+.btn-premium:active {
+  transform: scale(0.95);
 }
 
 .btn-ghost {
-  @apply bg-transparent text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors;
+  background-color: transparent;
+  color: #4b5563;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background-color: #f3f4f6;
 }
 
 /* Card styles */
 .card {
-  @apply bg-white rounded-2xl shadow-md p-6 border border-gray-100;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  border: 1px solid #f3f4f6;
 }
 
 .card-hover {
-  @apply card hover:shadow-xl transition-shadow duration-300 cursor-pointer;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
 /* Input styles */
 .input {
-  @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#E63946] focus:outline-none transition-colors;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: #E63946;
+  outline: none;
 }
 
 /* Badge styles */
 .badge {
-  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .badge-red {
-  @apply badge bg-red-100 text-red-800;
+  background-color: #fee2e2;
+  color: #991b1b;
 }
 
 .badge-purple {
-  @apply badge bg-purple-100 text-purple-800;
+  background-color: #f3e8ff;
+  color: #6b21a8;
 }
 
 .badge-yellow {
-  @apply badge bg-yellow-100 text-yellow-800;
+  background-color: #fef3c7;
+  color: #92400e;
 }
 
 .badge-green {
-  @apply badge bg-green-100 text-green-800;
+  background-color: #dcfce7;
+  color: #166534;
 }
 
 /* Progress bar */
 .progress-bar {
-  @apply h-3 bg-gray-200 rounded-full overflow-hidden;
+  height: 0.75rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
 }
 
 .progress-bar-fill {
-  @apply h-full bg-gradient-to-r from-[#E63946] to-[#FFD166] rounded-full transition-all duration-500;
+  height: 100%;
+  background: linear-gradient(to right, #E63946, #FFD166);
+  border-radius: 9999px;
+  transition: all 0.5s ease;
 }
 
 /* Star rating */
 .star {
-  @apply text-2xl text-gray-300;
+  font-size: 1.5rem;
+  color: #d1d5db;
 }
 
 .star-filled {
-  @apply text-2xl text-[#FFD166];
+  font-size: 1.5rem;
+  color: #FFD166;
 }
 
 /* Level badges */
 .level-cadet {
-  @apply bg-blue-100 text-blue-800 border-2 border-blue-300;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 2px solid #93c5fd;
 }
 
 .level-rookie {
-  @apply bg-green-100 text-green-800 border-2 border-green-300;
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 2px solid #6ee7b7;
 }
 
 .level-legend {
-  @apply bg-yellow-100 text-yellow-800 border-2 border-yellow-300;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 2px solid #fcd34d;
 }
 
 /* Animation keyframes */
@@ -277,6 +377,12 @@ body {
 /* Responsive helpers */
 @media (max-width: 768px) {
   .landscape-warning {
-    @apply fixed inset-0 bg-white z-50 flex items-center justify-center;
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
